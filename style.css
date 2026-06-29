@@ -1,0 +1,36 @@
+fieldset div{
+    display: flex;
+    align-items: center; 
+    margin-bottom: 15px; 
+    border-radius: 12px;
+}
+
+label {
+    width: 150px; 
+    margin-right: 15px;
+    font-weight: bold;
+    text-align: left; 
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+    border-radius: 8px; 
+    padding: 8px; 
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.submit-row {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 20px;
+    padding-right: 5px; 
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="https://teach-backend-fawn.vercel.app/api/product" method="POST" enctype="multipart/form-data">
+            <fieldset>
+            <legend>General Info</legend>
+                <div>
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="name" size="30" maxlength="50" required>
+                </div>
+                <div>
+                    <label for="itemDescription">Item Description</label>
+                    <textarea id="desc" name="itemDescription" size="30" rows="5" cols="30">
+                    </textarea>
+                </div>
+                <label>Category </label>
+                <select id="category" name="Category">
+                    <option value="0">NotSpecified</option>
+                    <option value="1">consumption</option>
+                    <option value="2">household</option>
+                    <option value="3">electronics</option>
+                    <option value="4">gadget</option>
+                </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+            <legend>Misc.</legend>
+                <div>
+                    <label for="inventoryAmount" >Inventory Amount</label>
+                    <input type="number" id="inventoryAmount" name="amount" min="0" max="1000">
+                </div>
+                <div>
+                    <label for="listPrice" >List price</label>
+                    <input type="number" id="listPrice" name="price" min="0" max="1000000">
+                </div>
+                <div>
+                    <label> Available Store</label>
+                    <input type="checkbox" id="c1" name="availableStores[]" value="bangkok" /> Bangkok
+                    <input type="checkbox" id="c2" name="availabelStores[]" value="pattaya" /> Pattaya
+                    <input type="checkbox" id="c2" name="availableStores[]" value="phuket" /> Phuket
+                </div>
+                <div>
+                    <label> Available Store</label>
+                    <input type="radio" id="r1" name="status" value="Active" /> Active
+                    <input type="radio" id="r2" name="status" value="Inactive" /> Inactive
+                </div>
+            </fieldset>
+            <fieldset>
+            <legend>Staff</legend>
+                <div>
+                    <label for="staffEmail"> Staff Email </label>
+                    <input type="email" id="staffEmail" name="staffEmail" size="30" maxlength="50" required>
+                </div>
+            </fieldset>
+            <div class="submit-row">
+                <input type="submit" id="submit" name="submit" value="Submit Form">
+            </div>
+        </form>
+    </body>
+</html>
